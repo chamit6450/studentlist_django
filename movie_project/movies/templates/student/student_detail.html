@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ student.name }}</title>
+   
+</head>
+<body>
+
+    {% if student %}
+        <div class="student-card">
+            <h1>Student Detail</h1>
+            <p><strong>Name:</strong>{{ student.name }}</p>
+            <p><strong>Course:</strong> {{ student.course }}</p>
+            <p><strong>Age:</strong> {{ student.age }}</p>
+        </div>
+    {% else %}
+        <h1>Student not found!</h1>
+    {% endif %}
+
+    <a href="{% url 'home' %}">Back to Students</a>
+
+</body>
+</html>
